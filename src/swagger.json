@@ -32,7 +32,7 @@
                   "tipoDeConexao": {
                     "type": "string"
                   },
-                  "tipoDeConexao": {
+                  "classeDeConsumo": {
                     "type": "string"
                   },
                   "modalidadeTarifaria": {
