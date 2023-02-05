@@ -1,0 +1,83 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "lemon backend challenge",
+        "description": "the API checks the client's eligibility",
+        "contact": {
+            "email": "giovanaaraujo3003@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3330",
+            "description": "test API"
+        }
+    ],
+    "paths": {
+        "/check-customer-elegibility": {
+            "post": {
+                "summary": "Check customer elegibility",
+                "description": "checks the client's eligibility",
+                "tags": ["elegibility"],
+         "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "numeroDoDocumento": {
+                    "type": "string"
+                  },
+                  "tipoDeConexao": {
+                    "type": "string"
+                  },
+                  "tipoDeConexao": {
+                    "type": "string"
+                  },
+                  "modalidadeTarifaria": {
+                    "type": "string"
+                  },
+                  "historicoDeConsumo": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                  }
+                },
+                "example": {
+                    "numeroDoDocumento": "14041737706",
+                    "tipoDeConexao": "bifasico",
+                    "classeDeConsumo": "comercial",
+                    "modalidadeTarifaria": "convencional",
+                    "historicoDeConsumo": [
+                      3878,
+                      9760,
+                      5976,
+                      2797,
+                      2481,
+                      5731,
+                      7538,
+                      4392,
+                      7859,
+                      4160,
+                      6941,
+                      4597
+                    ]
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "error"
+          }
+        }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  api:
+    image: node:alpine
+    container_name: api
+    env_file: 
+      - .env
+    ports: 
+      - 3330:3330
+    volumes: 
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: npm run start
