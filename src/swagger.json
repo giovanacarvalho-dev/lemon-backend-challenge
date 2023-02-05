@@ -10,7 +10,7 @@
     },
     "servers": [
         {
-            "url": "https://lemon-backend-challenge.onrender.com",
+            "url": "http://localhost:3330",
             "description": "test API"
         }
     ],
